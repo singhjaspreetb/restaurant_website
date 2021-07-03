@@ -1,0 +1,88 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image: url("../images/header.jfif");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+.animation
+{
+    animation-name: nav-bar;
+    animation-duration: 0.7s;
+    animation-iteration-count: 1;
+    top: 25px;
+}
+
+@keyframes nav-bar{
+    from{
+        top: 0px;
+        opacity: 0;
+    }
+    to{
+        top: 40px;
+        opacity: 1;
+    }
+}
+
+.head-name{
+    animation-name: head_name;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+
+@keyframes head_name{
+    from{
+        transform: rotate(0deg) translateX(150px);
+    }
+    to{
+        transform: rotate(360deg) translateX(150px);
+    }
+}
+
+.nav-name{
+    font-size: 5rem;
+    color: white;
+    margin-top: 8%;
+    margin-left: 1%;
+}
+
+.head-quote{
+    animation-name: head-quote;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    margin-left: 5%;
+    color: white;
+    font-size: 1.5rem;
+}
+
+@media only screen and (max-width : 600px)
+{
+    .nav-name{
+        font-size: 3rem;
+    }
+}
+
+@keyframes head-quote{
+    25%{
+        opacity: 0%;
+        left: 2%;
+    }
+    50%{
+        opacity: 0.3%;
+        left: 3%;
+    }
+    75%{
+        opacity: 0.6%;
+        left: 4%;
+    }
+    100%{
+        opacity: 1%;
+        left: 5%;
+    }
+}
