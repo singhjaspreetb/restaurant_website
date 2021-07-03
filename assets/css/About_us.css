@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    align-items: center;
+    /*text-align: center;*/
+    justify-content: center;
+    display: flex;
+    /*color: aqua;*/
+    min-height: 100vh;
+    background-color: white;
+    padding: 85px;
+}
+.about-section{
+    background-image: url(/assets/images/about-us.jpg);
+    background-size: cover;
+    background-repeat:no-repeat ;
+    background-size: 61%;
+    background-color: white;
+    /*background-color: bisque ;*/
+    overflow: hidden;
+    padding: 100px;
+    /*margin-left: 250px;*/
+}
+.inner{
+    width: 60%;
+    background-color:aliceblue;
+    position:relative;
+    /*bottom: 20%;*/
+   /* border-radius: 50px;*/
+    float: right;
+    padding: 30px;
+}
+.inner h1{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 900;
+
+}
+.text{
+    font-size: 1rem;
+    line-height: 30px;
+    text-align: justify;
+    margin-bottom: 40px;
+    margin-left: 55px;
+
+}
+.skill{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 30px;
+    margin-left: 75px;
+}
+.skill a{
+    background-color: tomato;
+    /*border-radius: 8px;*/
+    /*font-size: medium;*/
+    font-style: italic;
+    padding: 2px;
+    text-decoration: none;
+    color: black;
+}
+@media screen and (max-width:1220px) {
+    .inner{
+        padding: 80px;
+    }
+}
+@media screen and (max-width:900px) {
+    .about-section{
+        background-size: 100%;
+        padding: 100px 40px;
+    }
+    .inner{
+        width:100%
+    }
+}
+@media screen and (max-width:600px) {
+    .about-section{
+        padding: 0px;
+    }
+    .inner{
+        width: 100%;
+    }
+}
