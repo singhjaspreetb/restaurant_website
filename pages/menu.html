@@ -8,6 +8,25 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/css/menu.css">
+
+    <style>
+        .row {
+            margin-top: 10%;
+        }
+
+        .head-nav {
+            margin-left: 2%;
+            color: yellow;
+        }
+
+        img {
+            border-radius: 5%;
+        }
+
+        .border{
+            border: 2px white;
+        }
+    </style>
 </head>
 
 <body>
@@ -15,6 +34,9 @@
         <br><br><br><br>
         <h1>
             Menu
+            <a class="active head-nav" href="#home">Home</a>
+            <a class="head-nav" href="#blog">Blog</a>
+            <a class="head-nav" href="order.html">Order</a>
             <div style="float: right; cursor: pointer;">
                 <span class="glyphicon glyphicon-shopping-cart my-cart-icon">
                     <span class="badge bage-notify my-cart-badge"></span>
@@ -27,49 +49,50 @@
         </button> -->
 
         <div class="row">
-            <div class="col-md-3 text-center">
-                <img src="../assets/images/log.svg" alt="" width="270" height="270" alt="">
+            <h2 style="text-align: center; color: white; margin-bottom: 5%;">Non - Vegetarian</h2>
+            <div class="col-lg-3 text-center div-media border">
+                <img src="../assets/images/img1.jpg" alt="" width="270" height="270" alt="">
                 <br><br>
-                Product 1-<strong>$10</strong>
+                <h3>Delicious food-<strong>$10</strong></h3>
                 <br><br>
                 <button class="btn btn-danger my-cart-btn" data-id="1" data-name="product 1" data-summary="summary 1"
-                    data-price="20" data-quantity="1" data-image="...">
+                    data-price="20" data-quantity="1" data-image="../assets/images/img1.jpg">
                     Add to cart
                 </button>
                 <a href="#" class="btn btn-info">Details</a>
             </div>
 
-            <div class="col-md-3 text-center">
-                <img src="../assets/images/log.svg" alt="" width="270" height="270" alt="">
+            <div class="col-lg-3 text-center div-media">
+                <img src="../assets/images/img2.jpg" alt="" width="270" height="270" alt="">
                 <br><br>
-                Product 2-<strong>$20</strong>
+                <h3>Delicious food-<strong>$10</strong></h3>
                 <br><br>
                 <button class="btn btn-danger my-cart-btn" data-id="2" data-name="product 2" data-summary="summary 2"
-                    data-price="30" data-quantity="1" data-image="...">
+                    data-price="30" data-quantity="1" data-image="../assets/images/img2.jpg">
                     Add to cart
                 </button>
                 <a href="#" class="btn btn-info">Details</a>
             </div>
 
-            <div class="col-md-3 text-center">
-                <img src="../assets/images/log.svg" alt="" width="270" height="270" alt="">
+            <div class="col-lg-3 text-center div-media">
+                <img src="../assets/images/img3.jpg" alt="" width="270" height="270" alt="">
                 <br><br>
-                Product 3-<strong>$30</strong>
+                <h3>Delicious food-<strong>$10</strong></h3>
                 <br><br>
                 <button class="btn btn-danger my-cart-btn" data-id="3" data-name="product 3" data-summary="summary 3"
-                    data-price="40" data-quantity="1" data-image="...">
+                    data-price="40" data-quantity="1" data-image="../assets/images/img3.jpg">
                     Add to cart
                 </button>
                 <a href="#" class="btn btn-info">Details</a>
             </div>
 
-            <div class="col-md-3 text-center">
-                <img src="../assets/images/log.svg" alt="" width="270" height="270" alt="">
+            <div class="col-lg-3 text-center div-media">
+                <img src="../assets/images/img4.jpg" alt="" width="270" height="270" alt="">
                 <br><br>
-                Product 4<strong>$40</strong>
+                <h3>Delicious food-<strong>$10</strong></h3>
                 <br><br>
                 <button class="btn btn-danger my-cart-btn" data-id="4" data-name="product 4" data-summary="summary 4"
-                    data-price="40" data-quantity="1" data-image="...">
+                    data-price="40" data-quantity="1" data-image="../assets/images/img4.jpg">
                     Add to cart
                 </button>
                 <a href="#" class="btn btn-info">Details</a>
@@ -78,11 +101,182 @@
 
         </div>
 
-    </div>
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="../assets/js/mycart.js"></script>
-    <script src="../assets/js/cart.js"></script>
+
+
+
+        <div class="row">
+            <div class="col-lg-3 text-center div-media">
+                <img src="../assets/images/img5.jpg" alt="" width="270" height="270" alt="">
+                <br><br>
+                <h3>Delicious food-<strong>$10</strong></h3>
+                <br><br>
+                <button class="btn btn-danger my-cart-btn" data-id="5" data-name="product 5" data-summary="summary 5"
+                    data-price="20" data-quantity="1" data-image="../assets/images/img5.jpg">
+                    Add to cart
+                </button>
+                <a href="#" class="btn btn-info">Details</a>
+            </div>
+
+            <div class="col-lg-3 text-center div-media">
+                <img src="../assets/images/img6.jpg" alt="" width="270" height="270" alt="">
+                <br><br>
+                <h3>Delicious food-<strong>$10</strong></h3>
+                <br><br>
+                <button class="btn btn-danger my-cart-btn" data-id="6" data-name="product 6" data-summary="summary 6"
+                    data-price="30" data-quantity="1" data-image="../assets/images/img6.jpg">
+                    Add to cart
+                </button>
+                <a href="#" class="btn btn-info">Details</a>
+            </div>
+
+            <div class="col-lg-3 text-center div-media">
+                <img src="../assets/images/img1.jpg" alt="" width="270" height="270" alt="">
+                <br><br>
+                <h3>Delicious food-<strong>$10</strong></h3>
+                <br><br>
+                <button class="btn btn-danger my-cart-btn" data-id="7" data-name="product 7" data-summary="summary 7"
+                    data-price="40" data-quantity="1" data-image="../assets/images/img1.jpg">
+                    Add to cart
+                </button>
+                <a href="#" class="btn btn-info">Details</a>
+            </div>
+
+            <div class="col-lg-3 text-center div-media">
+                <img src="../assets/images/img2.jpg" alt="" width="270" height="270" alt="">
+                <br><br>
+                <h3>Delicious food-<strong>$10</strong></h3>
+                <br><br>
+                <button class="btn btn-danger my-cart-btn" data-id="8" data-name="product 8" data-summary="summary 8"
+                    data-price="40" data-quantity="1" data-image="../assets/images/img2.jpg">
+                    Add to cart
+                </button>
+                <a href="#" class="btn btn-info">Details</a>
+            </div>
+
+
+        </div>
+
+
+
+        <div class="row">
+            <h2 style="text-align: center; color: white; margin-bottom: 5%;">Vegetarian</h2>
+            <div class="col-lg-3 text-center div-media">
+                <img src="../assets/images/img3.jpg" alt="" width="270" height="270" alt="">
+                <br><br>
+                <h3>Delicious food-<strong>$10</strong></h3>
+                <br><br>
+                <button class="btn btn-danger my-cart-btn" data-id="9" data-name="product 9" data-summary="summary 9"
+                    data-price="20" data-quantity="1" data-image="../assets/images/img3.jpg">
+                    Add to cart
+                </button>
+                <a href="#" class="btn btn-info">Details</a>
+            </div>
+
+            <div class="col-lg-3 text-center div-media">
+                <img src="../assets/images/img4.jpg" alt="" width="270" height="270" alt="">
+                <br><br>
+                <h3>Delicious food-<strong>$10</strong></h3>
+                <br><br>
+                <button class="btn btn-danger my-cart-btn" data-id="10" data-name="product 10" data-summary="summary 10"
+                    data-price="30" data-quantity="1" data-image="../assets/images/img4.jpg">
+                    Add to cart
+                </button>
+                <a href="#" class="btn btn-info">Details</a>
+            </div>
+
+            <div class="col-lg-3 text-center div-media">
+                <img src="../assets/images/img5.jpg" alt="" width="270" height="270" alt="">
+                <br><br>
+                <h3>Delicious food-<strong>$10</strong></h3>
+                <br><br>
+                <button class="btn btn-danger my-cart-btn" data-id="11" data-name="product 11" data-summary="summary 11"
+                    data-price="40" data-quantity="1" data-image="../assets/images/img5.jpg">
+                    Add to cart
+                </button>
+                <a href="#" class="btn btn-info">Details</a>
+            </div>
+
+            <div class="col-lg-3 text-center div-media">
+                <img src="../assets/images/img6.jpg" alt="" width="270" height="270" alt="">
+                <br><br>
+                <h3>Delicious food-<strong>$10</strong></h3>
+                <br><br>
+                <button class="btn btn-danger my-cart-btn" data-id="12" data-name="product 12" data-summary="summary 12"
+                    data-price="40" data-quantity="1" data-image="../assets/images/img6.jpg">
+                    Add to cart
+                </button>
+                <a href="#" class="btn btn-info">Details</a>
+            </div>
+            </div>
+
+
+
+
+
+
+
+
+            <div class="row">
+                <div class="col-lg-3 text-center div-media">
+                    <img src="../assets/images/img3.jpg" alt="" width="270" height="270" alt="">
+                    <br><br>
+                    <h3>Delicious food-<strong>$10</strong></h3>
+                    <br><br>
+                    <button class="btn btn-danger my-cart-btn" data-id="13" data-name="product 13"
+                        data-summary="summary 13" data-price="20" data-quantity="1"
+                        data-image="../assets/images/img3.jpg">
+                        Add to cart
+                    </button>
+                    <a href="#" class="btn btn-info">Details</a>
+                </div>
+
+                <div class="col-lg-3 text-center div-media">
+                    <img src="../assets/images/img4.jpg" alt="" width="270" height="270" alt="">
+                    <br><br>
+                    <h3>Delicious food-<strong>$10</strong></h3>
+                    <br><br>
+                    <button class="btn btn-danger my-cart-btn" data-id="14" data-name="product 14"
+                        data-summary="summary 14" data-price="30" data-quantity="1"
+                        data-image="../assets/images/img4.jpg">
+                        Add to cart
+                    </button>
+                    <a href="#" class="btn btn-info">Details</a>
+                </div>
+
+                <div class="col-lg-3 text-center div-media">
+                    <img src="../assets/images/img5.jpg" alt="" width="270" height="270" alt="">
+                    <br><br>
+                    <h3>Delicious food-<strong>$10</strong></h3>
+                    <br><br>
+                    <button class="btn btn-danger my-cart-btn" data-id="11" data-name="product 11"
+                        data-summary="summary 11" data-price="40" data-quantity="1"
+                        data-image="../assets/images/img5.jpg">
+                        Add to cart
+                    </button>
+                    <a href="#" class="btn btn-info">Details</a>
+                </div>
+
+                <div class="col-lg-3 text-center div-media">
+                    <img src="../assets/images/img6.jpg" alt="" width="270" height="270" alt="">
+                    <br><br>
+                    <h3>Delicious food-<strong>$10</strong></h3>
+                    <br><br>
+                    <button class="btn btn-danger my-cart-btn" data-id="12" data-name="product 12"
+                        data-summary="summary 12" data-price="40" data-quantity="1"
+                        data-image="../assets/images/img6.jpg">
+                        Add to cart
+                    </button>
+                    <a href="#" class="btn btn-info">Details</a>
+                </div>
+
+
+            </div>
+
+        </div>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="../assets/js/mycart.js"></script>
+        <script src="../assets/js/cart.js"></script>
 </body>
 
 </html>
