@@ -1,9 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
 :root{
+    --yellow:#F7CA3E;
     --yellow:#F7CA3E;
 }
 
 *{
-    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: "Poppins", sans-serif;
     margin:0; padding:0;
     box-sizing: border-box;
     text-decoration: none;
@@ -118,6 +122,14 @@ header #menu-bar{
     color:#666;
     cursor: pointer;
     display: none;
+}
+
+.badge-notify {
+    background: red;
+    position: relative;
+    top: -20px;
+    right: 40px;
+    font-family: sans-serif;
 }
 
 .home{

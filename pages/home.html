@@ -14,6 +14,8 @@
         href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;500&family=Roboto:wght@100;300;400;500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
     <link rel="stylesheet" href="../assets/css/home.css">
 
 </head>
@@ -33,6 +35,13 @@
                 <li><a href="#blog">blog</a></li>
                 <li><a href="menu.html">menu</a></li>
                 <li><a href="order.html">order</a></li>
+                <li>
+                    <div style="float: right; cursor: pointer;">
+                        <span class="glyphicon glyphicon-shopping-cart my-cart-icon">
+                            <span class="badge bage-notify my-cart-badge"></span>
+                        </span>
+                    </div>
+                </li>
                 <!-- <li class="d-flex">
                     <div class="search-div">
                         <form id="content">
@@ -99,7 +108,8 @@
                     <i class="fas fa-star"></i>
                 </div>
                 <div class="price">$30.00</div>
-                <a href="#"><button class="btn">add to cart</button></a>
+                <a href="#"><button class="btn btn-danger my-cart-btn" data-id="1" data-name="product 1" data-summary="summary 1"
+                    data-price="20" data-quantity="1" data-image="...">add to cart</button></a>
             </div>
 
             <div class="box" data-aos="fade-left">
@@ -113,7 +123,8 @@
                     <i class="fas fa-star"></i>
                 </div>
                 <div class="price">$30.00</div>
-                <a href="#"><button class="btn">add to cart</button></a>
+                <a href="#"><button class="btn btn-danger my-cart-btn" data-id="1" data-name="product 1" data-summary="summary 1"
+                    data-price="20" data-quantity="1" data-image="...">add to cart</button></a>
             </div>
 
             <div class="box" data-aos="fade-right">
@@ -127,7 +138,8 @@
                     <i class="fas fa-star"></i>
                 </div>
                 <div class="price">$30.00</div>
-                <a href="#"><button class="btn">add to cart</button></a>
+                <a href="#"><button class="btn btn-danger my-cart-btn" data-id="1" data-name="product 1" data-summary="summary 1"
+                    data-price="20" data-quantity="1" data-image="...">add to cart</button></a>
             </div>
 
 
@@ -142,7 +154,8 @@
                     <i class="fas fa-star"></i>
                 </div>
                 <div class="price">$30.00</div>
-                <a href="#"><button class="btn">add to cart</button></a>
+                <a href="#"><button class="btn btn-danger my-cart-btn" data-id="1" data-name="product 1" data-summary="summary 1"
+                    data-price="20" data-quantity="1" data-image="...">add to cart</button></a>
             </div>
 
             <div class="box" data-aos="fade-left">
@@ -156,7 +169,8 @@
                     <i class="fas fa-star"></i>
                 </div>
                 <div class="price">$30.00</div>
-                <a href="#"><button class="btn">add to cart</button></a>
+                <a href="#"><button class="btn btn-danger my-cart-btn" data-id="1" data-name="product 1" data-summary="summary 1"
+                    data-price="20" data-quantity="1" data-image="...">add to cart</button></a>
             </div>
 
             <div class="box" data-aos="fade-right">
@@ -170,7 +184,8 @@
                     <i class="fas fa-star"></i>
                 </div>
                 <div class="price">$30.00</div>
-                <a href="#"><button class="btn">add to cart</button></a>
+                <a href="#"><button class="btn btn-danger my-cart-btn" data-id="1" data-name="product 1" data-summary="summary 1"
+                    data-price="20" data-quantity="1" data-image="...">add to cart</button></a>
             </div>
 
 
@@ -266,7 +281,11 @@
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="../assets/js/home.js"></script>
+    <script src="../assets/js/mycart.js"></script>
+    <script src="../assets/js/cart.js"></script>
     <script>
         AOS.init({
             delay: 400,
