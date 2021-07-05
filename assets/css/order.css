@@ -251,7 +251,11 @@ section .container .contactForm .formBox .inputBox input[type="submit"]
 }
 @media only screen and (max-width: 1120px)
 {
+    body{
+    background-color:#03a9f4 ;
+    }
     section{
+        margin-right: 32%;
         width: auto;
         height:90rem;
     }
@@ -286,5 +290,19 @@ section .container .contactForm .formBox .inputBox input[type="submit"]
          display: flex;
         flex-direction: column; 
     } 
+}
+
+@media only screen and (max-width: 1036px)
+{
+    section{
+        margin-right: 31%;
+    }
+}
+
+@media only screen and (max-width: 768px)
+{
+    section{
+        margin-right: 10%;
+    }
 }
  
