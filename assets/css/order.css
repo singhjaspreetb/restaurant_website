@@ -249,3 +249,30 @@ section .container .contactForm .formBox .inputBox input[type="submit"]
     padding: 12px;
     font-size: 1.3rem;
 }
+
+@media only screen and (max-width: 300px) {
+    body{
+        background-color: #03a9f4;
+        justify-content: center;
+        justify-items: center;
+        
+    }
+     section .container
+    {
+        width: 10%;
+        /* position: absolute; */
+        display: flex;
+        /* flex-direction: column; */
+      
+    }
+    section .container .contactForm
+    {
+        width: 10%;
+        /* display: block; */
+        /* margin-left : 20%; */
+        /* margin-top : 10%; */
+        /* position: relative; */
+        /* padding-left: 5%;   */
+    } 
+
+  }
