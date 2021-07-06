@@ -249,30 +249,60 @@ section .container .contactForm .formBox .inputBox input[type="submit"]
     padding: 12px;
     font-size: 1.3rem;
 }
-
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 1120px)
+{
     body{
-        background-color: #03a9f4;
-        justify-content: center;
-        justify-items: center;
-        
+    background-color:#03a9f4 ;
+    }
+    section{
+        margin-right: 32%;
+        width: auto;
+        height:90rem;
     }
      section .container
     {
-        width: 10%;
-        /* position: absolute; */
-        display: flex;
-        /* flex-direction: column; */
-      
+        background-color: #03a9f4;
+        height: 100%;
+        position: relative;
+        margin-top: 0rem;
+        flex-wrap: wrap;
     }
     section .container .contactForm
     {
-        width: 10%;
-        /* display: block; */
-        /* margin-left : 20%; */
-        /* margin-top : 10%; */
-        /* position: relative; */
-        /* padding-left: 5%;   */
+        margin-left : 45.9%;
+        margin-top : 10%;
+        position: absolutey;
+        padding-left: 5%; 
+        height: 70rem;
+         
     } 
+    section .container .contactinfo
+    {
+        margin-top: 60%;
+        margin-left: 50%;
+        
+        justify-content: center;
+        justify-items: center;
+    }
+    section .container .contactForm .formBox 
+    { 
+       padding-left: -10%;
+         display: flex;
+        flex-direction: column; 
+    } 
+}
 
-  }
+@media only screen and (max-width: 1036px)
+{
+    section{
+        margin-right: 31%;
+    }
+}
+
+@media only screen and (max-width: 768px)
+{
+    section{
+        margin-right: 10%;
+    }
+}
+ 
