@@ -76,10 +76,10 @@ cursor: pointer;
 align-items: flex-start;
 }
 
-section .container .contactinfo .info li img
+/* section .container .contactinfo .info li img
 {
    
-}
+} */
 
 section .container .contactinfo .info li span:nth-child(1)
 {
@@ -249,6 +249,33 @@ section .container .contactForm .formBox .inputBox input[type="submit"]
     padding: 12px;
     font-size: 1.3rem;
 }
+
+:root{
+    --yellow:#F7CA3E;
+}
+
+a{
+    text-decoration: none;
+}
+
+.btn{
+    position: relative;
+    bottom: 15px;
+    float: right;
+    font-size: 1.7rem;
+    padding:.4rem 2rem;
+    border-radius: 5rem;
+    margin-top: 1rem;
+    background:none;
+    color:#333;
+    cursor: pointer;
+    border:.2rem solid var(--yellow);
+}
+
+.btn:hover{
+    background:var(--yellow);
+}
+
 @media only screen and (max-width: 1120px)
 {
     body{

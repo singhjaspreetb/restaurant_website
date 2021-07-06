@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/order.css">
+    
     <title>Website name | Contact Us</title>
 
     <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
@@ -54,46 +55,42 @@
             
             <div class="contactForm">
                 <h2>Request Your Custom Order ...  </h2>
-                <form class="formBox">
+
+                <form class="formBox" action="../assets/php/order.php" method="POST">
 
 
                     <div class="inputBox w50">
-                        <input type="text" name="" required>
+                        <input type="text" name="First_name" required>
                         <span>First Name</span>
                     </div>
 
                     <div class="inputBox w50">
-                        <input type="text" name="" required>
+                        <input type="text" name="last_name" required>
                         <span>Last Name</span>
                     </div>
 
                     <div class="inputBox w50">
-                        <input  type="email" name="" required  >
+                        <input  type="email" name="email" required  >
                         <span>E-mail Address</span>
                     </div>
 
                     <div class="inputBox w50">
-                        <input type="tel" name="" required>
+                        <input type="tel" name="tel" required>
                         <span>Mobile Number</span>
                     </div>
 
                     <div class="inputBox w100">
-                        <textarea name="" required ></textarea>
+                        <textarea name="msg" required ></textarea>
                         <span> Write Your Custom Order Here .. </span>
                     </div>
 
                     <div class="inputBox w100">
                         <input class = "submit"type="submit" value="Send">
+                        <button class="btn"><a href="home.html">Home</a></button>
                     </div>
-
-                    
-
                 </form>
             </div>
         </div>
-
-      
-
     </section>
 </body>
 
