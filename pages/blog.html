@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+    
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../assets/css/blog.css" />
+    <link rel="stylesheet" href="../assets/css/home.css" />
+    <title>BLog</title>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo"><img src="../assets/images/logo-img.png" alt="" /></a>
+        <div id="menu-bar" class="fas fa-hamburger"></div>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="home.html">home</a></li>
+                <li><a href="#popular">popular</a></li>
+                <li><a class="active" href="#blog">blog</a></li>
+                <li><a href="menu.html">menu</a></li>
+                <li><a href="order.html">order</a></li>
+                <li class="d-flex">
+                    <div class="container h-100">
+                        <div class="d-flex justify-content-center h-100">
+                            <div class="searchbar">
+                                <input class="search_input" type="text" name="" placeholder="Search..." />
+                                <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a class="nav-link" href="signin_signup.html">
+                        <button class="btn btn-outline-primary" type="submit">
+                            Login
+                        </button>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="../assets/images/product-1.jpg" alt="First slide" />
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Lorem ipsum dolor sit.</h5>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Itaque reprehenderit voluptatibus ducimus iure. Enim, fugiat
+                                quisquam! Aliquid optio asperiores totam.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="../assets/images/product-2.jpg" alt="Second slide" />
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="../assets/images/product-3.jpg" alt="Third slide" />
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </section>
+        <div class="outer">
+            <div class="left">
+                <a href="#" style="font-size: 5rem; color: black">
+                    <q>Life’s too short for boring food</q></a>
+            </div>
+            <div class="right">
+                <div class="inner"></div>
+                <div class="inner"></div>
+            </div>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <div id="forheading">
+            <h1 id="H1">Every day is a good day for your restaurant</h1>
+        </div>
+        <hr />
+        <hr />
+        <br />
+        <section class="container-flid">
+            <div class="secondouter">
+                <div class="inner2">
+                    <img class="a123"
+                        src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=353&q=80" />
+
+                    <div class="a1234">
+                        Food is any substance[1] consumed to provide nutritional support
+                        for an organism. Food is usually of plant, animal or fungal
+                        origin, and contains essential nutrients, such as carbohydrates,
+                        fats, proteins, vitamins, or minerals. The substance is ingested
+                        by an organism and assimilated by the organism's cells to provide
+                        energy, maintain life, or stimulate growth.
+                    </div>
+                </div>
+                <div class="inner2">
+                    <img class="a123"
+                        src="https://images.unsplash.com/photo-1432139509613-5c4255815697?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=332&q=80" />
+
+                    <div class="a1234">
+                        Different species of animals have different feeding behaviours
+                        that satisfy the needs of their unique metabolisms, often evolved
+                        to fill a specific ecological niche within specific geographical
+                        contexts. Omnivorous humans are highly adaptable and have adapted
+                        to obtain food in many different ecosystems. Historically, humans
+                        secured food through two main methods.
+                    </div>
+                </div>
+                <div class="inner2">
+                    <img class="a123"
+                        src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=401&q=80" />
+
+                    <div class="a1234">
+                        hunting and gathering and agriculture. As agricultural
+                        technologies increased, humans settled into agriculture lifestyles
+                        with diets shaped by the agriculture opportunities in their
+                        geography. Geographic and cultural differences has led to creation
+                        of numerous cuisines and culinary arts, including a wide array of
+                        ingredients, herbs, spices, techniques, and dishes.
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br />
+        <br />
+        <div class="secondouter">
+            <div class="inner2">
+                <img class="a123"
+                    src="https://images.unsplash.com/photo-1470324161839-ce2bb6fa6bc3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=334&q=80" />
+                <div class="a1234">
+                    Food is treated in a number of articles. For a description of the
+                    processes of absorption and utilization of food, see nutrition;
+                    nutrition, human; digestion; and digestive system, human. For
+                    information on the methods used to prepare raw foods for cooking,
+                    consumption, or storage, see food preservation.
+                </div>
+            </div>
+            <div class="inner2">
+                <img class="a123"
+                    src="https://images.unsplash.com/photo-1478145046317-39f10e56b5e9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=334&q=80" />
+
+                <div class="a1234">
+                    Today, the majority of the food energy required by the
+                    ever-increasing population of the world is supplied by the
+                    industrial food industry, which produces food with intensive
+                    agriculture and distributes it through complex food processing and
+                    food distribution systems. This system of conventional agriculture
+                    relies heavily on fossil fuels.
+                </div>
+            </div>
+            <div class="inner2">
+                <img class="a123"
+                    src="https://images.unsplash.com/photo-1488477181946-6428a0291777?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=334&q=80" />
+
+                <div class="a1234">
+                    The food system has significant impacts on a wide range of other
+                    social and political issues including: sustainability, biological
+                    diversity, economics, population growth, water supply, and access to
+                    food. The right to food is a human right derived from the
+                    International Covenant on Economic, Social and Cultural Rights
+                    (ICESCR), recognizing the "right to an adequate standard of living.
+                </div>
+            </div>
+        </div>
+        <br />
+        <div>
+            <h1 id="H2">The food dudes</h1>
+        </div>
+        <hr />
+        <hr />
+        <section>
+            <div class="outermost">
+                <div class="left1">
+                    <div class="a1">
+                        <div class="o1a"></div>
+                        <div class="o1ab">
+                            Fundamental rights, food security is often a priority
+                            international policy activity; for example Sustainable
+                            Development Goal 2.
+                        </div>
+                    </div>
+                    <div class="a1">
+                        <div class="o1b"></div>
+                        <div class="o1ab">
+                            As cultures have mixed through forces like international trade
+                            and globalization, ingredients Lorem ipsum dolor sit amet.
+                        </div>
+                    </div>
+                    <div class="a1">
+                        <div class="o1c"></div>
+                        <div class="o1ab">
+                            Beyond their geographic and cultural origins, creating a
+                            cosmopolitan exchange of different food traditions and
+                            practices.
+                        </div>
+                    </div>
+                    <div class="a1">
+                        <div class="o1d"></div>
+                        <div class="o1ab">
+                            Packaged foods are manufactured outside the home for purchase.
+                            This can be as simple as a butcher preparing meat .
+                        </div>
+                    </div>
+                </div>
+                <div class="right1">
+                    <div class="ro1"></div>
+                    <div class="ro1"></div>
+                </div>
+            </div>
+        </section>
+        <br />
+        <div>
+            <h1 id="H3">Every meal is a happy meal.</h1>
+        </div>
+        <hr />
+        <hr />
+        <br />
+
+        <br />
+        <br />
+
+        <section>
+            <div class="fourth1">
+                <div class="o4">
+                    <div>
+                        <img id="a14"
+                            src="https://images.unsplash.com/photo-1490818387583-1baba5e638af?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=631&q=80"
+                            alt="" />
+                    </div>
+                    <div class="o41">
+                        Natural foods and "all-natural foods" are widely used terms in
+                        food labeling and marketing with a variety of definitions, most of
+                        which are vague.
+                    </div>
+                </div>
+                <div class="o4">
+                    <div>
+                        <img id="a14"
+                            src="https://images.unsplash.com/photo-1460306855393-0410f61241c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=752&q=80"
+                            alt="" />
+                    </div>
+                    <div class="o41">
+                        Organic food is food produced by methods that comply with the
+                        standards of organic farming. Standards vary worldwide, but
+                        organic farming in general features practices that strive to cycle
+                        resources.
+                    </div>
+                </div>
+
+                <div class="o4">
+                    <div>
+                        <img id="a14"
+                            src="https://images.unsplash.com/photo-1494390248081-4e521a5940db?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=695&q=80"
+                            alt="" />
+                    </div>
+                    <div class="o41">
+                        Health food is food marketed to provide human health effects
+                        beyond a normal healthy diet required for human nutrition. Foods
+                        marketed as health foods may be part of one or more categories.
+                    </div>
+                </div>
+                <div class="o4">
+                    <div>
+                        <img id="a14"
+                            src="https://images.unsplash.com/photo-1534080564583-6be75777b70a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80"
+                            alt="" />
+                    </div>
+                    <div class="o41">
+                        A functional food is a food given an additional function (often
+                        one related to health-promotion or disease prevention) by adding
+                        new ingredients or more of existing ingredients.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- <div id="before">
+
+            <div class="o5th">
+                <div class="o5">
+                    <div class="o5a">
+                    </div>
+                    <div class="o5a1">
+                        Diet food or dietetic food refers to any food or beverage whose recipe is altered to reduce fat,
+                        carbohydrates, abhor/adhore sugar.
+                    </div>
+                </div>
+                <div class="o5">
+                    <div class="o5b">
+
+                    </div>
+                    <div class="o5a1">
+                        Finger food is food meant to be eaten directly using the hands, in contrast to food eaten with a
+                        knife and fork, spoon, chopsticks.
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+
+            <div class="o5th">
+                <div class="o5">
+                    <div class="o5c">
+
+                    </div>
+                    <div class="o5a1">
+                        Freezing food slows down decomposition by turning residual moisture into ice, inhibiting the
+                        growth of most bacterial species.
+                    </div>
+                </div>
+                <div class="o5">
+                    <div class="o5d">
+
+                    </div>
+                    <div class="o5a1">
+                        Fresh food is food which has not been preserved and has not spoiled yet. For vegetables and
+                        fruits, this means that they have been recently harvested.
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="box-container">
+                <div class="box">
+                    <h3>contact info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> abc, Indai 123456</p>
+                    <p><i class="fas fa-envelope"></i> xyz@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +123-456-7890</p>
+                    <p><i class="fas fa-phone"></i> +111-222-3333</p>
+                </div>
+
+                <div class="box">
+                    <h3>branch location</h3>
+                    <a href="#">india</a>
+                    <a href="#">USA</a>
+                    <a href="#">france</a>
+                    <a href="#">russia</a>
+                </div>
+
+                <div class="box">
+                    <h3>quick links</h3>
+                    <a href="#">home</a>
+                    <a href="#">menu</a>
+                    <a href="#">popular</a>
+                    <a href="#">blog</a>
+                    <a href="#">order</a>
+                </div>
+
+                <div class="box">
+                    <h3>follow us</h3>
+                    <a href="#">instagram</a>
+                    <a href="#">facebook</a>
+                    <a href="#">twitter</a>
+                    <a href="#">linkedin</a>
+                </div>
+            </div>
+
+            <h1 class="credit">
+                created by <a href="#">F4 Group </a> all rights reserved.
+            </h1>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../assets/js/home.js"></script>
+</body>
+
+</html>
