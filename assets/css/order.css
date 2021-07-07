@@ -6,6 +6,31 @@
     font-family: 'poppins', sans-serif;
 }
 
+:root{
+    --yellow:#F7CA3E;
+}
+a{
+    text-decoration: none;
+}
+
+.btn{
+    position: relative;
+    bottom: 20px;
+    float: right;
+    font-size: 1.7rem;
+    padding:.5rem 2rem;
+    border-radius: 5rem;
+    margin-top: 1rem;
+    background:none;
+    color:#333;
+    cursor: pointer;
+    border:.2rem solid var(--yellow);
+}
+
+.btn:hover{
+    background:var(--yellow);
+}
+
 section {
     position: relative;
     display: flex;

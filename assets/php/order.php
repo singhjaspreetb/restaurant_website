@@ -21,7 +21,8 @@ if(!$con){
     $sql = "INSERT INTO `order`.`order_data` (`FName`, `LName`, `Email`, `Mob`, `Corder`) VALUES ('$FName', '$LName',' $Email', '$Mob', '$Corder');";
 
     if($con->query($sql) == true){
-        echo "Successfully inserted";
+        echo "<script>alert('Successfully inserted');</script>";
+        echo "<script>window.location.assign('../../pages/home.html');</script>";
     }
     else{
         echo "Error : $sql <br> $con->error";

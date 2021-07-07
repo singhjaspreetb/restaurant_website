@@ -21,7 +21,9 @@ if(!$con){
     $result = mysqli_query($con,$sql);
 
     if(mysqli_num_rows($result) == 1){
-        echo "Successfully Logged In";
+        // echo "Success";
+        echo "<script>alert('Successfully Logged In');</script>";
+        echo "<script>window.location.assign('../../pages/home.html');</script>";
         exit();
     }
     else{
@@ -29,7 +31,6 @@ if(!$con){
     }
 
     $con->close();
-
 }
 
 ?>
