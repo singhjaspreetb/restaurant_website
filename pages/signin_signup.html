@@ -11,20 +11,20 @@
 </head>
 
 <body>
-    <embed src="../assets/images/bg-audio.mp3" loop="true" autostart="true" width="2" height="0">
+    <!-- <embed src="../assets/images/bg-audio.mp3" loop="true" autostart="true" width="2" height="0"> -->
 
     <div class="container">
         <div class="forms-container">
             <div class="signin-signup">
-                <form action="" class="sign-in-form">
+                <form action="../assets/php/auth_login.php" method="POST" class="sign-in-form">
                     <h2 class="title">Sign in</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
-                        <input type="text" placeholder="Username" required>
+                        <input type="text" placeholder="Username" name="Username" required>
                     </div>
                     <div class="input-field">
                         <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="Password" required>
+                        <input type="password" placeholder="Password" name="Password" required>
                     </div>
                     <input type="submit" value="Login" class="btn solid">
 
@@ -44,19 +44,19 @@
                         </a>
                     </div>
                 </form>
-                <form action="" class="sign-up-form">
+                <form action="../assets/php/auth_signup.php" method="POST" class="sign-up-form">
                     <h2 class="title">Sign up</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
-                        <input type="text" placeholder="Username" required>
+                        <input type="text" placeholder="Username" name="Username" required>
                     </div>
                     <div class="input-field">
                         <i class="fas fa-envelope"></i>
-                        <input type="text" placeholder="Email" required>
+                        <input type="text" placeholder="Email" name="Email" required>
                     </div>
                     <div class="input-field">
                         <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="Password" required>
+                        <input type="password" placeholder="Password" name="Password" required>
                     </div>
                     <input type="submit" value="Sign up" class="btn solid">
 
@@ -101,4 +101,4 @@
     <script src="../assets/js/signin_signup.js"></script>
 </body>
 
-</html>
+</html>1
