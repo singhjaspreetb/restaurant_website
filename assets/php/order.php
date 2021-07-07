@@ -1,3 +1,49 @@
+<?php      
+    $host = "localhost";  
+    $user = "root";  
+    $password = '';  
+    $db_name = "final_project";  
+      
+    $con = mysqli_connect($host, $user, $password, $db_name);
+      
+    if(mysqli_connect_errno()) {  
+        die("Failed to connect with MySQL: ". mysqli_connect_error());  
+    }  
+?><?php
+if(isset($_POST['FName']))
+{
+// $database =  "order";
+$server = "localhost";
+$username = "root";
+$password = "";
+
+$con = mysqli_connect($server, $username , $password);
+
+if(!$con){
+    die("Connection to this database failed due to" . mysqli_connect_error());
+}
+
+    $FName = $_POST['FName'];
+    $LName = $_POST['LName'];
+    $Email = $_POST['Email'];
+    $Mob = $_POST['Mob'];
+    $Corder = $_POST['Corder'];
+
+    $sql = "INSERT INTO `order`.`order_data` (`FName`, `LName`, `Email`, `Mob`, `Corder`) VALUES ('$FName', '$LName',' $Email', '$Mob', '$Corder');";
+
+    if($con->query($sql) == true){
+        echo "Successfully inserted";
+    }
+    else{
+        echo "Error : $sql <br> $con->error";
+    }
+
+    $con->close();
+
+}
+
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -57,7 +103,7 @@
             <div class="contactForm">
                 <h2>Request Your Custom Order ...  </h2>
 
-                <form class="formBox" action="../assets/php/order.php"  method="POST">
+                <form class="formBox" action="backend.php"  method="POST">
 
 
                     <div class="inputBox w50">
