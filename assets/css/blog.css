@@ -1,75 +1,116 @@
-@media screen and (min-width: 2040px) {
-  main {
-    font-size: 45px;
-  }
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
 
-  #H1 {
-    font-size: 5rem;
-  }
-
-  #H2 {
-    font-size: 5rem;
-  }
-
-  #H3 {
-    font-size: 5rem;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.searchbar{
-    margin-bottom: auto;
-    margin-top: auto;
-    height: 60px;
-    background-color: #353b48;
-    border-radius: 30px;
-    padding: 10px;
-    }
+body,
+input {
+  font-family: "Poppins", sans-serif;
+}
 
-    .search_input{
-    color: white;
-    border: 0;
-    outline: 0;
-    background: none;
-    width: 0;
-    caret-color:transparent;
-    line-height: 40px;
-    transition: width 0.4s linear;
-    }
+.searchbar {
+  margin-bottom: auto;
+  margin-top: auto;
+  height: 60px;
+  background-color: #353b48;
+  border-radius: 30px;
+  padding: 10px;
+}
 
-    .searchbar:hover > .search_input{
-    padding: 0 10px;
-    width: 250px;
-    caret-color:red;
-    transition: width 0.4s linear;
-    }
+.search_input {
+  color: white;
+  border: 0;
+  outline: 0;
+  background: none;
+  width: 0;
+  caret-color: transparent;
+  line-height: 40px;
+  transition: width 0.4s linear;
+}
 
-    .searchbar:hover > .search_icon{
-    background: white;
-    color: #e74c3c;
-    }
+.searchbar:hover > .search_input {
+  padding: 0 10px;
+  width: 250px;
+  caret-color: red;
+  transition: width 0.4s linear;
+}
 
-    .search_icon{
-    height: 40px;
-    width: 40px;
-    float: right;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    color:white;
-    text-decoration:none;
-    }
+.searchbar:hover > .search_icon {
+  background: white;
+  color: #e74c3c;
+}
 
+.search_icon {
+  height: 40px;
+  width: 40px;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+}
+
+.carousel-caption h2 {
+  font-size: 5rem;
+  text-shadow: 5px 5px 5px black;
+  padding: 20px;
+}
+.carousel-caption p {
+  text-shadow: 5px 5px 5px black;
+  font-size: 2.5rem;
+}
+
+.row {
+  justify-content: center;
+}
+
+.card-title {
+  font-size: 3rem;
+}
+.card-text {
+  font-size: 1.5rem;
+}
+.btn {
+  float: right;
+}
+.head-line {
+  font-size: 4rem;
+  padding: 8px 0px;
+}
+hr {
+  height: 4px;
+  background-color: black;
+}
+/* 
 main {
   margin-top: 100px;
-
-  padding: 0px 100px;
 }
+
+.row {
+            margin-top: 10%;
+        }
+
+        .head-nav {
+            margin-left: 2%;
+            color: yellow;
+        }
+
+        img {
+            border-radius: 5%;
+        }
+
+        .border {
+            border: 2px white;
+        }
 
 .outer {
   display: flex;
   flex-wrap: wrap;
-  /* border: 5px solid red; */
   height: 100vh;
   width: 80vw;
   margin-left: 100px;
@@ -310,11 +351,11 @@ main {
   #forheading {
     margin-top: 100vh;
   }
-
+  
   .left {
     width: 100vw;
   }
-
+  
   .right {
     margin-left: 30%;
   }
@@ -327,36 +368,54 @@ main {
     margin-top: 9px;
     margin-left: 5px;
   }
-
+  
   .outermost {
     height: 200vh;
   }
-
+  
   .left1 {
     width: 100vw;
   }
-
+  
   .right1 {
     height: 50vh;
     width: 60vw;
     margin-left: 10vw;
     margin-bottom: 2vh;
   }
-
+  
   .o1 {
     height: 25vh;
   }
-
+  
   #before {
     margin-left: 7vw;
   }
-
+  
   .o5th {
     height: 50vh;
     margin-top: 30vh;
   }
-
+  
   .o5 {
     width: 100%;
   }
 }
+
+@media screen and (min-width: 2040px) {
+  main {
+    font-size: 45px;
+  }
+
+  #H1 {
+    font-size: 5rem;
+  }
+
+  #H2 {
+    font-size: 5rem;
+  }
+
+  #H3 {
+    font-size: 5rem;
+  }
+} */
