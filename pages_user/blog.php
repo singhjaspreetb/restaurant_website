@@ -180,8 +180,6 @@ include("../assets/php/auth.php");
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
                 <div class="card-div col-md-3 p-4" style="width: 22rem;">
                     <div class="card ">
                         <img class="card-img-top" src="../assets/images/img1.jpg" alt="Card image cap">
@@ -286,8 +284,6 @@ include("../assets/php/auth.php");
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
                 <div class="card-div col-md-3 p-4" style="width: 22rem;">
                     <div class="card ">
                         <img class="card-img-top" src="../assets/images/img1.jpg" alt="Card image cap">
