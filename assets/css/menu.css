@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 
 * {
   margin: 0;
@@ -71,12 +72,15 @@ input {
 
 .card-title {
   font-size: 3rem;
+  font-family: "ubuntu";
+  position: relative;
+  bottom: 5%;
+  padding: 0px 0px 5% 0px;
 }
 .card-text {
-  font-size: 1.5rem;
-}
-.btn {
-  /* float: right; */
+  font-size: 2rem;
+  background-color: #F7CA3E;
+
 }
 .head-line {
   font-size: 4rem;
