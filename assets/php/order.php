@@ -14,7 +14,7 @@ if (isset($_POST['FName'])) {
 
     if ($con->query($sql) == true) {
         echo "<script>alert('Your Resquest Submitted');</script>";
-        header("Location: ../../pages_user/home.php");
+        header("Location: ../../pages/home.php");
     } 
     else {
         echo "<script>alert('Try Again!');</script>";
