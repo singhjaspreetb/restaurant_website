@@ -53,27 +53,36 @@
     </header>
 
     <main>
-        <div class="row card-div">
-            <div class=" col-md-4 p-4"  style="width: 30rem;">
-                <img class="card-img-top p-4" src="../assets/images/img1.jpg" alt="Card image cap">
-            </div>
-
-            <div class="card col-md-8"  style="width: 30rem;">
-                <div class="card-body align-items-center">
-                    <h5 class="card-title d-flex justify-content-center">Card title</h5>
-                    <p class="card-text p-2 d-flex justify-content-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam repudiandae voluptatem inventore aliquam cumque? Consequatur harum tempora aliquam possimus ex.</p>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <p class="card-text-price p-2 d-flex justify-content-center"> Price - 100 Rs</p>
-                        </div>
-                        <div class="col-md-6">
-                            <a href="#" class="btn center btn-primary d-flex justify-content-center">Remove Item</a>
+        <?php
+        $count = 1;
+        if ($count == 0) {
+            echo    '<div style="text-align: center;">
+                    <h1>Your Cart is Empty!</h1>
+                </div>';
+        } 
+        else {
+            echo '  <div class="row card-div">
+                    <div class=" col-md-4 p-4"  style="width: 30rem;">
+                        <img class="card-img-top p-4" src="../assets/images/img1.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card col-md-8"  style="width: 30rem;">
+                        <div class="card-body align-items-center">
+                            <h5 class="card-title d-flex justify-content-center">Card title</h5>
+                            <p class="card-text p-2 d-flex justify-content-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam repudiandae voluptatem inventore aliquam cumque? Consequatur harum tempora aliquam possimus ex.</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="card-text-price p-2 d-flex justify-content-center"> Price - 100 Rs</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <a href="#" class="btn center btn-primary d-flex justify-content-center">Remove Item</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        
+                </div>';
+        }
+        ?>
+
     </main>
 
     <footer>
