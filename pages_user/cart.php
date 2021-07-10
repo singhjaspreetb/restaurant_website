@@ -1,3 +1,6 @@
+<?php
+include("../assets/php/auth.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,16 +22,15 @@
     <embed src="../assets/images/bg-audio.mp3" loop="true" autostart="true" width="2" height="0">
 
     <header>
-        <a href="#" class="logo"><img src="../assets/images/logo-img.png" alt="" /></a>
+        <a href="home.php" class="logo"><img src="../assets/images/logo-img.png" alt="" /></a>
         <div id="menu-bar" class="fas fa-hamburger"></div>
 
         <nav class="navbar">
             <ul>
                 <li><a href="home.php">home</a></li>
-                <!-- <li><a href="#popular">popular</a></li> -->
                 <li><a href="blog.php">blog</a></li>
                 <li><a href="menu.php">menu</a></li>
-                <li><a href="#">Cart</a></li>
+                <li><a href="cart.php" class="active">Cart</a></li>
                 <li><a href="order.php">order</a></li>
                 <li class="d-flex">
                     <div class="container h-100">
@@ -47,7 +49,13 @@
                         </button>
                     </a>
                 </li>
-
+                <li>
+                    <h2 class="username" style="font-size: 3rem; color:yellow; text-shadow:0px 0px 15px black; font-family: sans-serif;">
+                        <?php
+                            echo $_SESSION["username"];
+                        ?>
+                    </h2>
+                </li>
             </ul>
         </nav>
     </header>

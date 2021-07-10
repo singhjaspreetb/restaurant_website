@@ -23,7 +23,7 @@ include("../assets/php/auth.php");
     <embed src="../assets/images/bg-audio.mp3" loop="true" autostart="true" width="2" height="0">
     <header>
 
-        <a href="#" class="logo"><img src="../assets/images/logo-img.png" alt=""></a>
+        <a href="home.php" class="logo"><img src="../assets/images/logo-img.png" alt=""></a>
         <div id="menu-bar" class="fas fa-hamburger"></div>
 
         <nav class="navbar">

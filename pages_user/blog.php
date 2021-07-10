@@ -34,13 +34,14 @@ include("../assets/php/auth.php");
     <embed src="../assets/images/bg-audio.mp3" loop="true" autostart="true" width="2" height="0">
 
     <header>
-        <a href="#" class="logo"><img src="../assets/images/logo-img.png" alt="" /></a>
+        <a href="home.php" class="logo"><img src="../assets/images/logo-img.png" alt="" /></a>
         <div id="menu-bar" class="fas fa-hamburger"></div>
 
         <nav class="navbar">
             <ul>
                 <li><a href="home.php">home</a></li>
-                <!-- <li><a href="#popular">popular</a></li> -->
+                <li><a href="#popular">popular</a></li>
+                <li><a href="#treanding">Treanding</a></li>
                 <li><a href="blog.php">blog</a></li>
                 <li><a href="menu.php">menu</a></li>
                 <li><a href="#">Cart</a></li>
@@ -127,9 +128,8 @@ include("../assets/php/auth.php");
     </section>
     <main>
         <section id="popular">
-            <h2 class="head-line">
-                Popular
-            </h2>
+        <h2 class="heading head-line"> Popular <span>Topics</span></h2>
+
             <hr><br>
             <div class="row">
                 <div class="card-div col-md-3 p-4" style="width: 22rem;">
@@ -231,9 +231,8 @@ include("../assets/php/auth.php");
             </div>
         </section>
         <section id="treanding">
-            <h2 class="head-line">
-                Treanding
-            </h2>
+        <h2 class="heading head-line"> Treanding <span>Topics</span></h2>
+
             <hr><br>
             <div class="row">
                 <div class="card-div col-md-3 p-4" style="width: 22rem;">
