@@ -15,8 +15,8 @@ if (isset($_POST['Username'])) {
     if (mysqli_num_rows($result) == 1) {
         $_SESSION['username'] = $Username;
         echo "<script>alert('Successfully Logged In $Username');</script>";
-        // echo "<script>window.location.assign('../../pages_user/home.php');</script>";
-        header("Location: ../../pages_user/home.php");
+        // echo "<script>window.location.assign('../../pages/home.php');</script>";
+        header("Location: ../../pages/home.php");
         exit();
     }
     else {

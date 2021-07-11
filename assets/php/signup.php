@@ -11,11 +11,11 @@ if(isset($_POST['Username']))
 
     if($con->query($sql) == true){
         echo "<script>alert('Successfully Registered');</script>";
-        echo "<script>window.location.assign('../../pages_user/signin_signup.php');</script>";
+        echo "<script>window.location.assign('../../pages/signin_signup.php');</script>";
     }
     else{
         echo "<script>alert('Already Registered');</script>";
-        echo "<script>window.location.assign('../../pages_user/signin_signup.php');</script>";
+        echo "<script>window.location.assign('../../pages/signin_signup.php');</script>";
     }
     $con->close();
 }

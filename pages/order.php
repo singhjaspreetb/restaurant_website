@@ -1,32 +1,6 @@
 <?php
 include("../assets/php/auth.php");
 ?>
-<?php
-if (isset($_POST['FName'])) {
-
-    include('config.php');
-
-
-    $FName = $_POST['FName'];
-    $LName = $_POST['LName'];
-    $Email = $_POST['Email'];
-    $Mob = $_POST['Mob'];
-    $Corder = $_POST['Corder'];
-
-    $sql = "INSERT INTO `f4_food`.`order_data` (`f_name`, `l_name`, `email`, `mob`, `cus_order`) VALUES ('$FName', '$LName',' $Email', '$Mob', '$Corder');";
-
-    if ($con->query($sql) == true) {
-        echo "<script>alert('Your Resquest Submitted');</script>";
-        echo "<script>window.location.assign('home.php');</script>";
-    } 
-    else {
-        echo "<script>alert('Try Again!');</script>";
-    }
-
-    $con->close();
-}
-
-?>
 
 
 <!DOCTYPE html>
@@ -87,7 +61,7 @@ if (isset($_POST['FName'])) {
             <div class="contactForm">
                 <h2>Request Your Custom Order ... </h2>
 
-                <form class="formBox" action="order.php" method="POST">
+                <form class="formBox" action="../assets/php/order.php" method="POST">
 
 
                     <div class="inputBox w50">

@@ -1,3 +1,6 @@
+<?php
+include("../assets/php/auth.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,16 +22,15 @@
     <embed src="../assets/images/bg-audio.mp3" loop="true" autostart="true" width="2" height="0">
 
     <header>
-        <a href="#" class="logo"><img src="../assets/images/logo-img.png" alt="" /></a>
+        <a href="home.php" class="logo"><img src="../assets/images/logo-img.png" alt="" /></a>
         <div id="menu-bar" class="fas fa-hamburger"></div>
 
         <nav class="navbar">
             <ul>
                 <li><a href="home.php">home</a></li>
-                <!-- <li><a href="#popular">popular</a></li> -->
                 <li><a href="blog.php">blog</a></li>
                 <li><a href="menu.php">menu</a></li>
-                <li><a href="#">Cart</a></li>
+                <li><a href="cart.php" class="active">Cart</a></li>
                 <li><a href="order.php">order</a></li>
                 <li class="d-flex">
                     <div class="container h-100">
@@ -47,33 +49,48 @@
                         </button>
                     </a>
                 </li>
-
+                <li>
+                    <h2 class="username" style="font-size: 3rem; color:yellow; text-shadow:0px 0px 15px black; font-family: sans-serif;">
+                        <?php
+                            echo $_SESSION["username"];
+                        ?>
+                    </h2>
+                </li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <div class="row card-div">
-            <div class=" col-md-4 p-4"  style="width: 30rem;">
-                <img class="card-img-top p-4" src="../assets/images/img1.jpg" alt="Card image cap">
-            </div>
-
-            <div class="card col-md-8"  style="width: 30rem;">
-                <div class="card-body align-items-center">
-                    <h5 class="card-title d-flex justify-content-center">Card title</h5>
-                    <p class="card-text p-2 d-flex justify-content-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam repudiandae voluptatem inventore aliquam cumque? Consequatur harum tempora aliquam possimus ex.</p>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <p class="card-text-price p-2 d-flex justify-content-center"> Price - 100 Rs</p>
-                        </div>
-                        <div class="col-md-6">
-                            <a href="#" class="btn center btn-primary d-flex justify-content-center">Remove Item</a>
+        <?php
+        $count = 1;
+        if ($count == 0) {
+            echo    '<div style="text-align: center;">
+                    <h1>Your Cart is Empty!</h1>
+                </div>';
+        } 
+        else {
+            echo '  <div class="row card-div">
+                    <div class=" col-md-4 p-4"  style="width: 30rem;">
+                        <img class="card-img-top p-4" src="../assets/images/img1.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card col-md-8"  style="width: 30rem;">
+                        <div class="card-body align-items-center">
+                            <h5 class="card-title d-flex justify-content-center">Card title</h5>
+                            <p class="card-text p-2 d-flex justify-content-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam repudiandae voluptatem inventore aliquam cumque? Consequatur harum tempora aliquam possimus ex.</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="card-text-price p-2 d-flex justify-content-center"> Price - 100 Rs</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <a href="#" class="btn center btn-primary d-flex justify-content-center">Remove Item</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        
+                </div>';
+        }
+        ?>
+
     </main>
 
     <footer>
