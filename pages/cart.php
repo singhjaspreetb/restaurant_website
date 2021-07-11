@@ -52,7 +52,7 @@ include("../assets/php/auth.php");
                 <li>
                     <h2 class="username" style="font-size: 3rem; color:yellow; text-shadow:0px 0px 15px black; font-family: sans-serif;">
                         <?php
-                            echo $_SESSION["username"];
+                        echo $_SESSION["username"];
                         ?>
                     </h2>
                 </li>
@@ -62,35 +62,76 @@ include("../assets/php/auth.php");
 
     <main>
         <?php
-        $count = 1;
-        if ($count == 0) {
-            echo    '<div style="text-align: center;">
+        $database = "cart";
+        $server = "localhost";
+        $username = "root";
+        $password = "";
+
+        $con = mysqli_connect($server, $username, $password, $database);
+
+        if (!$con) {
+            die("Connection to this database failed due to" . mysqli_connect_error());
+        }
+
+        $menu_topic = $_SESSION['username'];
+        $sql = "select * from " . $menu_topic . "";
+
+        $data = mysqli_query($con, $sql);
+        $total =  mysqli_num_rows($data);
+
+        if ($total == 0) {
+            echo    '
+                <div style="text-align: center;">
                     <h1>Your Cart is Empty!</h1>
-                </div>';
-        } 
-        else {
-            echo '  <div class="row card-div">
+                </div>
+                ';
+        } else {
+            $total_price = 0;
+            while ($result = mysqli_fetch_assoc($data)) {
+                $total_price = $total_price + $result['price'];
+                echo '  
+                <div class="row card-div">
                     <div class=" col-md-4 p-4"  style="width: 30rem;">
-                        <img class="card-img-top p-4" src="../assets/images/img1.jpg" alt="Card image cap">
+                        <img class="card-img-top p-4" src="' . $result['image'] . '" alt="Card image cap">
                     </div>
                     <div class="card col-md-8"  style="width: 30rem;">
                         <div class="card-body align-items-center">
-                            <h5 class="card-title d-flex justify-content-center">Card title</h5>
-                            <p class="card-text p-2 d-flex justify-content-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam repudiandae voluptatem inventore aliquam cumque? Consequatur harum tempora aliquam possimus ex.</p>
+                            <h5 class="card-title d-flex justify-content-center">' . $result['title'] . '</h5>
+                            <p class="card-text p-2 d-flex justify-content-center">' . $result['info'] . '</p>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <p class="card-text-price p-2 d-flex justify-content-center"> Price - 100 Rs</p>
+                                    <p class="card-text-price p-2 d-flex justify-content-center"> Price - ' . $result['price'] . ' Rs</p>
                                 </div>
                                 <div class="col-md-6">
-                                    <a href="#" class="btn center btn-primary d-flex justify-content-center">Remove Item</a>
+                                    <div class="d-flex justify-content-center">
+                                        <form action="../assets/php/cart.php" method="POST">
+                                            <select required name="cart" style="visibility: hidden;">
+                                                <option name="' . $result['menu_no'] . '" value="' . $result['menu_no'] . '"></option>
+                                            </select>
+                                            <input type="submit" name="submit" class="btn btn-primary " value="Remove Item">
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>';
+                </div>
+                ';
+            }
+            echo '
+            <div class="container p-4 card-div purchase" >
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="card-text-price p-2 d-flex justify-content-center">Total Price - ' . $total_price . ' Rs</p>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="#" class="btn center btn-primary d-flex justify-content-center">Purchase</a>
+                    </div>
+                </div>
+            </div>';
         }
         ?>
-
+        
     </main>
 
     <footer>

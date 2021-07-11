@@ -80,7 +80,6 @@ input {
 .card-text {
   font-size: 2rem;
   background-color: #F7CA3E;
-
 }
 .head-line {
   font-size: 4rem;
@@ -89,4 +88,5 @@ input {
 hr {
   height: 4px;
   background-color: black;
+  visibility: hidden;
 }

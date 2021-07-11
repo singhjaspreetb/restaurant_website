@@ -44,7 +44,7 @@ include("../assets/php/auth.php");
                     <div class="container h-100">
                         <div class="d-flex justify-content-center h-100">
                             <div class="searchbar">
-                                <input class="search_input" type="text" name="" placeholder="Search..." />
+                                <input class="search_input" type="text" name="" placeholder="Search..." style="font-size: 2rem;" />
                                 <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
                             </div>
                         </div>
@@ -60,7 +60,7 @@ include("../assets/php/auth.php");
                 <li>
                     <h2 class="username" style="font-size: 3rem; color:yellow; text-shadow:0px 0px 15px black; font-family: sans-serif;">
                         <?php
-                            echo $_SESSION["username"];
+                        echo $_SESSION["username"];
                         ?>
                     </h2>
                 </li>
@@ -122,138 +122,99 @@ include("../assets/php/auth.php");
     </section>
     <main>
         <section id="Veg">
-        <h2 class="heading head-line"> Veg <span>popular</span></h2>
+            <h2 class="heading head-line"> Veg <span>popular</span></h2>
             <hr><br>
             <div class="row">
-                <div class="card-div col-md-4 p-4" style="width: 22rem;">
+                <?php
+                $database = "menu";
+                $server = "localhost";
+                $username = "root";
+                $password = "";
+                
+                $con = mysqli_connect($server, $username, $password, $database);
+                
+                if (!$con) {
+                    die("Connection to this database failed due to" . mysqli_connect_error());
+                }
+                
+                $sql = "select * from veg";
+                $data = mysqli_query($con, $sql);
+                $total =  mysqli_num_rows($data);
+                if ($total != 0) {
+                    while ($result = mysqli_fetch_assoc($data)) {
+                        echo '
+                <div class="card-div col-md-4 p-4" style="width: 25rem;">
                     <div class="card">
-                        <img class="card-img-top p-4" src="../assets/images/img1.jpg" alt="Card image cap">
+                        <img class="card-img-top p-4" src="' . $result['image'] . '" alt="Card image cap">
                         <div class="card-body align-items-center">
-                            <h5 class="card-title d-flex justify-content-center">Card title</h5>
-                            <p class="card-text p-2 d-flex justify-content-center"> Price - 100 Rs</p>
-                            <a href="#" class="btn center btn-primary d-flex justify-content-center">Add to cart</a>
+                            <h5 class="card-title d-flex justify-content-center">' . $result['title'] . '</h5>
+                            <p class="card-text p-2 d-flex justify-content-center"> Price - ' . $result['price'] . ' Rs</p>
+                            <div class="d-flex justify-content-center">
+                                <form action="../assets/php/menu.php" method="POST">
+                                    <select required name="topic" style="visibility: hidden;">
+                                        <option name="veg" value="veg"></option>
+                                    </select>
+                                    <select required name="cart" style="visibility: hidden;">
+                                        <option name="' . $result['menu_no'] . '" value="' . $result['menu_no'] . '"></option>
+                                    </select>
+                                    <input type="submit" name="submit" class="btn btn-primary " value="Add to cart">
+                                </form>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="card-div col-md-4 p-4" style="width: 22rem;">
-                    <div class="card">
-                        <img class="card-img-top p-4" src="../assets/images/img1.jpg" alt="Card image cap">
-                        <div class="card-body align-items-center">
-                            <h5 class="card-title d-flex justify-content-center">Card title</h5>
-                            <p class="card-text p-2 d-flex justify-content-center"> Price - 100 Rs</p>
-                            <a href="#" class="btn center btn-primary d-flex justify-content-center">Add to cart</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-div col-md-4 p-4" style="width: 22rem;">
-                    <div class="card">
-                        <img class="card-img-top p-4" src="../assets/images/img1.jpg" alt="Card image cap">
-                        <div class="card-body align-items-center">
-                            <h5 class="card-title d-flex justify-content-center">Card title</h5>
-                            <p class="card-text p-2 d-flex justify-content-center"> Price - 100 Rs</p>
-                            <a href="#" class="btn center btn-primary d-flex justify-content-center">Add to cart</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-div col-md-4 p-4" style="width: 22rem;">
-                    <div class="card">
-                        <img class="card-img-top p-4" src="../assets/images/img1.jpg" alt="Card image cap">
-                        <div class="card-body align-items-center">
-                            <h5 class="card-title d-flex justify-content-center">Card title</h5>
-                            <p class="card-text p-2 d-flex justify-content-center"> Price - 100 Rs</p>
-                            <a href="#" class="btn center btn-primary d-flex justify-content-center">Add to cart</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-div col-md-4 p-4" style="width: 22rem;">
-                    <div class="card">
-                        <img class="card-img-top p-4" src="../assets/images/img1.jpg" alt="Card image cap">
-                        <div class="card-body align-items-center">
-                            <h5 class="card-title d-flex justify-content-center">Card title</h5>
-                            <p class="card-text p-2 d-flex justify-content-center"> Price - 100 Rs</p>
-                            <a href="#" class="btn center btn-primary d-flex justify-content-center">Add to cart</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-div col-md-4 p-4" style="width: 22rem;">
-                    <div class="card">
-                        <img class="card-img-top p-4" src="../assets/images/img1.jpg" alt="Card image cap">
-                        <div class="card-body align-items-center">
-                            <h5 class="card-title d-flex justify-content-center">Card title</h5>
-                            <p class="card-text p-2 d-flex justify-content-center"> Price - 100 Rs</p>
-                            <a href="#" class="btn center btn-primary d-flex justify-content-center">Add to cart</a>
-                        </div>
-                    </div>
-                </div>
+                </div>';
+                    }
+                }
+                ?>
             </div>
         </section>
         <section id="Non-Veg">
-        <h2 class="heading head-line"> Non-Veg <span>popular</span></h2>
+            <h2 class="heading head-line"> Non-Veg <span>popular</span></h2>
             <hr><br>
             <div class="row">
-                <div class="card-div col-md-4 p-4" style="width: 22rem;">
+                <?php
+                $database = "menu";
+                $server = "localhost";
+                $username = "root";
+                $password = "";
+                
+                $con = mysqli_connect($server, $username, $password, $database);
+                
+                if (!$con) {
+                    die("Connection to this database failed due to" . mysqli_connect_error());
+                }
+                
+                $sql = "select * from nonveg";
+                $data = mysqli_query($con, $sql);
+                $total =  mysqli_num_rows($data);
+                if ($total != 0) {
+                    while ($result = mysqli_fetch_assoc($data)) {
+                        echo '
+                <div class="card-div col-md-4 p-4" style="width: 25rem;">
                     <div class="card">
-                        <img class="card-img-top p-4" src="../assets/images/img1.jpg" alt="Card image cap">
+                        <img class="card-img-top p-4" src="' . $result['image'] . '" alt="Card image cap">
                         <div class="card-body align-items-center">
-                            <h5 class="card-title d-flex justify-content-center">Card title</h5>
-                            <p class="card-text p-2 d-flex justify-content-center"> Price - 100 Rs</p>
-                            <a href="#" class="btn center btn-primary d-flex justify-content-center">Add to cart</a>
+                            <h5 class="card-title d-flex justify-content-center">' . $result['title'] . '</h5>
+                            <p class="card-text p-2 d-flex justify-content-center"> Price - ' . $result['price'] . ' Rs</p>
+                            <div class="d-flex justify-content-center">
+                                <form action="../assets/php/menu.php" method="POST">
+                                    <select required name="topic" style="visibility: hidden;">
+                                        <option name="nonveg" value="nonveg"></option>
+                                    </select>
+                                    <select required name="cart" style="visibility: hidden;">
+                                        <option name="' . $result['menu_no']  . '" value="' . $result['menu_no']  . '"></option>
+                                    </select>
+                                    <input type="submit" name="submit" class="btn btn-primary " value="Add to cart">
+                                </form>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="card-div col-md-4 p-4" style="width: 22rem;">
-                    <div class="card">
-                        <img class="card-img-top p-4" src="../assets/images/img1.jpg" alt="Card image cap">
-                        <div class="card-body align-items-center">
-                            <h5 class="card-title d-flex justify-content-center">Card title</h5>
-                            <p class="card-text p-2 d-flex justify-content-center"> Price - 100 Rs</p>
-                            <a href="#" class="btn center btn-primary d-flex justify-content-center">Add to cart</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-div col-md-4 p-4" style="width: 22rem;">
-                    <div class="card">
-                        <img class="card-img-top p-4" src="../assets/images/img1.jpg" alt="Card image cap">
-                        <div class="card-body align-items-center">
-                            <h5 class="card-title d-flex justify-content-center">Card title</h5>
-                            <p class="card-text p-2 d-flex justify-content-center"> Price - 100 Rs</p>
-                            <a href="#" class="btn center btn-primary d-flex justify-content-center">Add to cart</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-div col-md-4 p-4" style="width: 22rem;">
-                    <div class="card">
-                        <img class="card-img-top p-4" src="../assets/images/img1.jpg" alt="Card image cap">
-                        <div class="card-body align-items-center">
-                            <h5 class="card-title d-flex justify-content-center">Card title</h5>
-                            <p class="card-text p-2 d-flex justify-content-center"> Price - 100 Rs</p>
-                            <a href="#" class="btn center btn-primary d-flex justify-content-center">Add to cart</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-div col-md-4 p-4" style="width: 22rem;">
-                    <div class="card">
-                        <img class="card-img-top p-4" src="../assets/images/img1.jpg" alt="Card image cap">
-                        <div class="card-body align-items-center">
-                            <h5 class="card-title d-flex justify-content-center">Card title</h5>
-                            <p class="card-text p-2 d-flex justify-content-center"> Price - 100 Rs</p>
-                            <a href="#" class="btn center btn-primary d-flex justify-content-center">Add to cart</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-div col-md-4 p-4" style="width: 22rem;">
-                    <div class="card">
-                        <img class="card-img-top p-4" src="../assets/images/img1.jpg" alt="Card image cap">
-                        <div class="card-body align-items-center">
-                            <h5 class="card-title d-flex justify-content-center">Card title</h5>
-                            <p class="card-text p-2 d-flex justify-content-center"> Price - 100 Rs</p>
-                            <a href="#" class="btn center btn-primary d-flex justify-content-center">Add to cart</a>
-                        </div>
-                    </div>
-                </div>
+                </div>';
+                    }
+                }
+                ?>
             </div>
         </section>
-
     </main>
     <footer>
         <div class="footer">

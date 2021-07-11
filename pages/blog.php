@@ -50,7 +50,7 @@ include("../assets/php/auth.php");
                     <div class="container h-100">
                         <div class="d-flex justify-content-center h-100">
                             <div class="searchbar">
-                                <input class="search_input" type="text" name="" placeholder="Search..." />
+                                <input class="search_input" type="text" name="" placeholder="Search..." style="font-size: 2rem;"  />
                                 <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
                             </div>
                         </div>
