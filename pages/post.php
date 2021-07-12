@@ -59,49 +59,59 @@ include("../assets/php/auth.php");
 
         <section>
             <?php
+
+            $database = "blog";
+            $server = "localhost";
+            $username = "root";
+            $password = "";
+
+            $con = mysqli_connect($server, $username, $password, $database);
+
+            if (!$con) {
+                die("Connection to this database failed due to" . mysqli_connect_error());
+            }
+
             if (isset($_POST['blog'])) {
-                header("Location: post.php");
+
                 $blog_no = $_POST['blog'];
                 $topic = $_POST['topic'];
-                $database = "blog";
-                $server = "localhost";
-                $username = "root";
-                $password = "";
-                
-                $con = mysqli_connect($server, $username, $password, $database);
-                
-                if (!$con) {
-                    die("Connection to this database failed due to" . mysqli_connect_error());
-                }
-                
-                $sql = "select * from ".$topic." where blog_no = ".$blog_no."";
+
+
+                $sql = "select * from " . $topic . " where blog_no=" . $blog_no . "";
+
                 $data = mysqli_query($con, $sql);
-            
-                $result = mysqli_fetch_assoc($data);
-            
-                if ($result != "") {
-                    
-                    echo'
-                    <div class="row">
-        
-                        <div class="col-md-8">
-                            <img src="../assets/images/product-1.jpg" class="img-fluid" alt="image">
-                        </div>
-                        <div class="col-md-4">
-                            <h1  class="title p-4">Card Title</h1>
-                            <p class="headline p-4">kcwejj</p>
-                        </div>
+                $result2 = mysqli_fetch_assoc($data);
+
+                $title = $result2['title'];
+                $headline = $result2['headline'];
+                $image = $result2['image'];
+                $info = $result2['info'];
+
+                // echo '<script>alert("hi hello")</script>';
+                // echo "<script>alert('$title $haedline $image $info')</script>";
+
+                if ($result2 != "") {
+
+                    echo '
+                <div class="row">
+
+                    <div class="col-md-8">
+                        <img src="'.$image.'" class="img-fluid" alt="image">
                     </div>
-                    <div class="p-4">
-                        <p class="para">kmfdj</p>
-                    </div>';
-                    exit();
-                }
+                    <div class="col-md-4">
+                        <h1  class="title p-4">'.$title.'</h1>
+                        <p class="headline p-4">'.$headline.'</p>
+                    </div>
+                </div>
+                <div class="p-4">
+                    <p class="para">'.$info.'</p>
+                </div>';
+                } 
                 else {
-                    echo "Not Found";
+                    echo "<h1>Not Data</h1>";
                 }
             }
-        ?>
+            ?>
         </section>
 
     </main>

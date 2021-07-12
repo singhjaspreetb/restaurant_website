@@ -155,7 +155,17 @@ include("../assets/php/auth.php");
                         <div class="card-body">
                             <h5 class="card-title">'.$result['title'].'</h5>
                             <p class="card-text">'.$result['headline'].'</p>
-                            <a href="#" class="btn center btn-primary">Read All</a>
+                            <div>
+                                <form action="post.php" method="POST">
+                                    <select required name="topic" style="visibility: hidden;">
+                                        <option name="popular" value="popular"></option>
+                                    </select>
+                                    <select required name="blog" style="visibility: hidden;">
+                                        <option name="' . $result['blog_no'] . '" value="' . $result['blog_no'] . '"></option>
+                                    </select>
+                                    <input type="submit" name="submit" class="btn btn-primary" onclick="location.href = "post.php";" value="Read All">
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>';
@@ -192,7 +202,7 @@ include("../assets/php/auth.php");
                         <div class="card-body">
                             <h5 class="card-title">'.$result['title'].'</h5>
                             <p class="card-text">'.$result['headline'].'</p>
-                            <div class="d-flex justify-content-center">
+                            <div>
                                 <form action="post.php" method="POST">
                                     <select required name="topic" style="visibility: hidden;">
                                         <option name="trending" value="trending"></option>
@@ -200,7 +210,7 @@ include("../assets/php/auth.php");
                                     <select required name="blog" style="visibility: hidden;">
                                         <option name="' . $result['blog_no'] . '" value="' . $result['blog_no'] . '"></option>
                                     </select>
-                                    <input type="submit" name="submit" class="btn btn-primary " value="Read All">
+                                    <input type="submit" name="submit" class="btn btn-primary" onclick="location.href = "post.php";" value="Read All">
                                 </form>
                             </div>
                         </div>
@@ -213,7 +223,7 @@ include("../assets/php/auth.php");
         </section>
     </main>
     <footer>
-        <div class="footer">
+        <div class="footer" >
             <div class="box-container">
                 <div class="box">
                     <h3>contact info</h3>

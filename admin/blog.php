@@ -96,6 +96,7 @@ if (isset($_POST['title'])) {
         echo "<script>alert('Blog Submitted');</script>";
         // header("Location: ../../pages/home.php");
     } else {
+        echo "INSERT INTO `blog`.`$topic` (`title`, `image`, `info`,`headline`) VALUES ('$title',' $loc', '$info', '$headline');";
         echo "<script>alert('Try Again!');</script>";
     }
 }
