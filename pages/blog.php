@@ -132,205 +132,83 @@ include("../assets/php/auth.php");
 
             <hr><br>
             <div class="row">
-                <div class="card-div col-md-3 p-4" style="width: 22rem;">
+            <?php
+                $database = "blog";
+                $server = "localhost";
+                $username = "root";
+                $password = "";
+                
+                $con = mysqli_connect($server, $username, $password, $database);
+                
+                if (!$con) {
+                    die("Connection to this database failed due to" . mysqli_connect_error());
+                }
+                
+                $sql = "select * from popular";
+                $data = mysqli_query($con, $sql);
+                $total =  mysqli_num_rows($data);
+                if ($total != 0) {
+                    while ($result = mysqli_fetch_assoc($data)) {
+                        echo'<div class="card-div col-md-3 p-4" style="width: 22rem;">
                     <div class="card ">
-                        <img class="card-img-top" src="../assets/images/img1.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="'.$result['image'].'" alt="Card image cap">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of
-                                the card's content.</p>
+                            <h5 class="card-title">'.$result['title'].'</h5>
+                            <p class="card-text">'.$result['headline'].'</p>
                             <a href="#" class="btn center btn-primary">Read All</a>
                         </div>
                     </div>
-                </div>
-                <div class="card-div col-md-3 p-4" style="width: 22rem;">
-                    <div class="card ">
-                        <img class="card-img-top" src="../assets/images/img2.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of
-                                the card's content.</p>
-                            <a href="#" class="btn center btn-primary">Read All</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-div col-md-3 p-4" style="width: 22rem;">
-                    <div class="card ">
-                        <img class="card-img-top" src="../assets/images/img3.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of
-                                the card's content.</p>
-                            <a href="#" class="btn center btn-primary">Read All</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-div col-md-3 p-4" style="width: 22rem;">
-                    <div class="card ">
-                        <img class="card-img-top" src="../assets/images/img4.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of
-                                the card's content.</p>
-                            <a href="#" class="btn center btn-primary">Read All</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-div col-md-3 p-4" style="width: 22rem;">
-                    <div class="card ">
-                        <img class="card-img-top" src="../assets/images/img1.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of
-                                the card's content.</p>
-                            <a href="#" class="btn center btn-primary">Read All</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-div col-md-3 p-4" style="width: 22rem;">
-                    <div class="card ">
-                        <img class="card-img-top" src="../assets/images/img2.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of
-                                the card's content.</p>
-                            <a href="#" class="btn center btn-primary">Read All</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-div col-md-3 p-4" style="width: 22rem;">
-                    <div class="card ">
-                        <img class="card-img-top" src="../assets/images/img3.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of
-                                the card's content.</p>
-                            <a href="#" class="btn center btn-primary">Read All</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-div col-md-3 p-4" style="width: 22rem;">
-                    <div class="card ">
-                        <img class="card-img-top" src="../assets/images/img4.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of
-                                the card's content.</p>
-                            <a href="#" class="btn center btn-primary">Read All</a>
-                        </div>
-                    </div>
-                </div>
+                </div>';
+                    }
+                }
+                ?>
             </div>
         </section>
-        <section id="treanding">
+        <section id="trending">
         <h2 class="heading head-line"> Treanding <span>Topics</span></h2>
 
             <hr><br>
             <div class="row">
-                <div class="card-div col-md-3 p-4" style="width: 22rem;">
+            <?php
+                $database = "blog";
+                $server = "localhost";
+                $username = "root";
+                $password = "";
+                
+                $con = mysqli_connect($server, $username, $password, $database);
+                
+                if (!$con) {
+                    die("Connection to this database failed due to" . mysqli_connect_error());
+                }
+                
+                $sql = "select * from trending";
+                $data = mysqli_query($con, $sql);
+                $total =  mysqli_num_rows($data);
+                if ($total != 0) {
+                    while ($result = mysqli_fetch_assoc($data)) {
+                        echo'<div class="card-div col-md-3 p-4" style="width: 22rem;">
                     <div class="card ">
-                        <img class="card-img-top" src="../assets/images/img1.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="'.$result['image'].'" alt="Card image cap">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of
-                                the card's content.</p>
-                            <a href="#" class="btn center btn-primary">Read All</a>
+                            <h5 class="card-title">'.$result['title'].'</h5>
+                            <p class="card-text">'.$result['headline'].'</p>
+                            <div class="d-flex justify-content-center">
+                                <form action="post.php" method="POST">
+                                    <select required name="topic" style="visibility: hidden;">
+                                        <option name="trending" value="trending"></option>
+                                    </select>
+                                    <select required name="blog" style="visibility: hidden;">
+                                        <option name="' . $result['blog_no'] . '" value="' . $result['blog_no'] . '"></option>
+                                    </select>
+                                    <input type="submit" name="submit" class="btn btn-primary " value="Read All">
+                                </form>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="card-div col-md-3 p-4" style="width: 22rem;">
-                    <div class="card ">
-                        <img class="card-img-top" src="../assets/images/img2.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of
-                                the card's content.</p>
-                            <a href="#" class="btn center btn-primary">Read All</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-div col-md-3 p-4" style="width: 22rem;">
-                    <div class="card ">
-                        <img class="card-img-top" src="../assets/images/img3.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of
-                                the card's content.</p>
-                            <a href="#" class="btn center btn-primary">Read All</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-div col-md-3 p-4" style="width: 22rem;">
-                    <div class="card ">
-                        <img class="card-img-top" src="../assets/images/img4.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of
-                                the card's content.</p>
-                            <a href="#" class="btn center btn-primary">Read All</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-div col-md-3 p-4" style="width: 22rem;">
-                    <div class="card ">
-                        <img class="card-img-top" src="../assets/images/img1.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of
-                                the card's content.</p>
-                            <a href="#" class="btn center btn-primary">Read All</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-div col-md-3 p-4" style="width: 22rem;">
-                    <div class="card ">
-                        <img class="card-img-top" src="../assets/images/img2.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of
-                                the card's content.</p>
-                            <a href="#" class="btn center btn-primary">Read All</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-div col-md-3 p-4" style="width: 22rem;">
-                    <div class="card ">
-                        <img class="card-img-top" src="../assets/images/img3.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of
-                                the card's content.</p>
-                            <a href="#" class="btn center btn-primary">Read All</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-div col-md-3 p-4" style="width: 22rem;">
-                    <div class="card ">
-                        <img class="card-img-top" src="../assets/images/img4.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of
-                                the card's content.</p>
-                            <a href="#" class="btn center btn-primary">Read All</a>
-                        </div>
-                    </div>
-                </div>
+                </div>';
+                    }
+                }
+                ?>
             </div>
         </section>
     </main>
