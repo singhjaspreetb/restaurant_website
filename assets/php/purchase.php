@@ -38,7 +38,7 @@ if (isset($_POST['price'])) {
 
         if ($con2->query($sql2) == true){
             if($con->query($sql3) == true) {
-                echo "<script>alert('Total Price : $total_price\nUsername : $cart_name\nYour Order has been Registred');</script>";
+                echo "<script>alert('Total Price : $total_price Username : $cart_name Your Order has been Registred');</script>";
                 echo "<script>window.location.assign('../../pages/menu.php');</script>";
             }
             else {
