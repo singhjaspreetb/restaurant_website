@@ -40,7 +40,8 @@ if (isset($_POST['cart'])) {
     }
     if ($con2->query($sql2) == true) {
         echo "<script>alert('Added to Cart');</script>";
-        header("Location: ../../pages/menu.php");
+        echo "<script>window.location.assign('../../pages/menu.php');</script>";
+
     } else {
         echo "<script>alert('Try Again!');</script>";
     }

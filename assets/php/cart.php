@@ -20,7 +20,7 @@ if (isset($_POST['cart'])) {
 
     if ($con->query($sql) == true) {
         echo "<script>alert('Removed From Cart');</script>";
-        header("Location: ../../pages/cart.php");
+        echo "<script>window.location.assign('../../pages/cart.php');</script>";
     } 
     else {
         echo "<script>alert('Try Again!');</script>";

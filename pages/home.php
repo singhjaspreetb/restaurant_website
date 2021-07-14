@@ -35,7 +35,7 @@ include("../assets/php/auth.php");
                 <li><a href="menu.php">menu</a></li>
                 <li><a href="order.php">order</a></li>
                 <li>
-                    <a href="#">Cart</a>
+                    <a href="cart.php">Cart</a>
                 </li>
                 <li>
                     <a class="nav-link" href="../assets/php/logout.php">

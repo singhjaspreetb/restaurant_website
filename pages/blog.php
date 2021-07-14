@@ -44,7 +44,7 @@ include("../assets/php/auth.php");
                 <li><a href="#treanding">Treanding</a></li>
                 <li><a href="blog.php">blog</a></li>
                 <li><a href="menu.php">menu</a></li>
-                <li><a href="#">Cart</a></li>
+                <li><a href="cart.php">Cart</a></li>
                 <li><a href="order.php">order</a></li>
                 <li class="d-flex">
                     <div class="container h-100">

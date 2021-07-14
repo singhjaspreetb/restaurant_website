@@ -125,16 +125,23 @@ include("../assets/php/auth.php");
                         <p class="card-text-price p-2 d-flex justify-content-center">Total Price - ' . $total_price . ' Rs</p>
                     </div>
                     <div class="col-md-6">
-                        <button onclick="purchase()"  class="btn center btn-primary d-flex justify-content-center">Purchase</button>
+                        <form action="../assets/php/purchase.php" method="POST">
+                            <select required name="price" style="visibility: hidden;">
+                                <option name="' . $total_price . '" value="' . $total_price . '"></option>
+                            </select>
+                            <input type="submit" onclick="purchase()" name="submit" class="btn btn-primary " value="Purchase">
+                        </form>
                     </div>
                 </div>
             </div>';
+                                    // <button onclick="purchase()"  class="btn center btn-primary d-flex justify-content-center">Purchase</button>
+
         }
         ?>
-        
+
     </main>
 
-    <footer >
+    <footer>
         <div class="footer">
             <div class="box-container">
                 <div class="box">
@@ -177,7 +184,7 @@ include("../assets/php/auth.php");
         </div>
     </footer>
     <script>
-        function purchase(){
+        function purchase() {
             alert("Order Confrmed :)");
         }
     </script>

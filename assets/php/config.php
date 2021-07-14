@@ -10,7 +10,6 @@
     $server = "localhost";
     $username = "root";
     $password = "";
-    $name = "Guest";
 
     $con = mysqli_connect($server, $username, $password, $database);
 
