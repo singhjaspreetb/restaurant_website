@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+input {
+  font-family: "Poppins", sans-serif;
+}
+
+.searchbar {
+  margin-bottom: auto;
+  margin-top: auto;
+  height: 60px;
+  background-color: #353b48;
+  border-radius: 30px;
+  padding: 10px;
+}
+
+.search_input {
+  color: white;
+  border: 0;
+  outline: 0;
+  background: none;
+  width: 0;
+  caret-color: transparent;
+  line-height: 40px;
+  transition: width 0.4s linear;
+}
+
+.searchbar:hover > .search_input {
+  padding: 0 10px;
+  width: 250px;
+  caret-color: red;
+  transition: width 0.4s linear;
+}
+
+.searchbar:hover > .search_icon {
+  background: white;
+  color: #e74c3c;
+}
+
+.search_icon {
+  height: 40px;
+  width: 40px;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+}
+
+.carousel-caption h2 {
+  font-size: 5rem;
+  text-shadow: 5px 5px 5px black;
+  padding: 20px;
+}
+.carousel-caption p {
+  text-shadow: 5px 5px 5px black;
+  font-size: 2.5rem;
+}
+
+main{
+  padding: 10%;
+}
+
+.row {
+  justify-content: center;
+}
+.card-img-top
+{
+  border: 2px solid;
+}
+.card-body{
+  margin-top: 4%;
+}
+.card-title {
+  font-size: 3rem;
+  font-family: "ubuntu";
+ 
+}
+.card-text {
+   
+  font-size: 2rem;
+
+}
+.card-text-price {
+  position: relative;
+  top: 20%;
+    width: 25rem;
+  font-size: 2rem;
+  background-color: #F7CA3E;
+
+}
+.btn{
+    width: 25rem;
+}
+.head-line {
+  font-size: 4rem;
+  padding: 8px 0px;
+}
+hr {
+  height: 4px;
+  background-color: black;
+}
+/* 
+.purchase{
+  background-color: black;
+  position: relative;
+  right: 10%;
+  bottom: 10%;
+} */
